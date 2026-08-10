@@ -63,9 +63,6 @@ flutter run
 
 **Tələblər:** Flutter SDK `>=3.0.0 <4.0.0`, Android/iOS emulator və ya fiziki cihaz.
 
-**Icazələr (permissions):**
-- Android: `AndroidManifest.xml`-də `ACCESS_FINE_LOCATION` icazəsi əlavə olunmalıdır
-- iOS: `Info.plist`-də `NSLocationWhenInUseUsageDescription` açar-dəyəri əlavə olunmalıdır
 
 ## Auth axını necə işləyir
 
@@ -75,6 +72,3 @@ flutter run
 4. Login/Register uğurlu olduqda token və user `shared_preferences`-ə yazılır, `AuthCubit.setAuthenticated()` çağırılır
 5. Logout zamanı sessiya təmizlənir və `AuthUnauthenticated` state-i emit olunur
 
-## Mock backend haqqında qeyd
-
-`AuthRepositoryImpl` real API əvəzinə in-memory mock istifadə edir (register olunan istifadəçilər yalnız runtime yaddaşında saxlanılır, tətbiq bağlananda silinir). Bu, `AuthRepository` interfeysinin arxasında gizlədilib — real backend-ə keçid yalnız bu implementasiyanı `DioClient`-lə işləyən yeni bir class ilə əvəz etməklə mümkündür, digər kodlara toxunmadan.

@@ -1,9 +1,9 @@
-// features/auth/cubit/auth_cubit.dart
+// features/auth/presentation/cubit/auth_cubit.dart
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../data/repositories/auth_repository.dart';
-import '../data/repositories/session_repository.dart';
-import '../domain/entities/user.dart';
+import '../../data/repositories/auth_repository.dart';
+import '../../data/repositories/session_repository.dart';
+import '../../domain/entities/user.dart';
 import 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {

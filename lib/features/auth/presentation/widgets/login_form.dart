@@ -6,8 +6,8 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/validators.dart';
 import '../../../../core/widgets/custom_text_field.dart';
-import '../../cubit/login_cubit.dart';
-import '../../cubit/login_state.dart';
+import '../cubit/login_cubit.dart';
+import '../cubit/login_state.dart';
 import 'login_submit_button.dart';
 
 class LoginForm extends StatefulWidget {

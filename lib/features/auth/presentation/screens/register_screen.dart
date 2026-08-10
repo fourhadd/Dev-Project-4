@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/di/injections.dart';
 import '../../../../core/widgets/app_gradient_background.dart';
 import '../../../../core/widgets/glass_card.dart';
-import '../../cubit/register_cubit.dart';
+import '../cubit/register_cubit.dart';
 import '../widgets/register_header.dart';
 import '../widgets/register_form.dart';
 

@@ -1,5 +1,6 @@
+// features/location/presentation/cubit/location_state.dart
 import 'package:equatable/equatable.dart';
-import '../domain/entities/location_point.dart';
+import '../../domain/entities/location_point.dart';
 
 abstract class LocationState extends Equatable {
   const LocationState();

@@ -1,8 +1,9 @@
+// features/auth/presentation/widgets/register_submit_button.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/widgets/main_button.dart';
-import '../../cubit/register_cubit.dart';
-import '../../cubit/register_state.dart';
+import '../cubit/register_cubit.dart';
+import '../cubit/register_state.dart';
 
 class RegisterSubmitButton extends StatelessWidget {
   final VoidCallback onPressed;

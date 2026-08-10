@@ -1,5 +1,6 @@
+// features/location/presentation/cubit/location_cubit.dart
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../data/repositories/location_repository.dart';
+import '../../data/repositories/location_repository.dart';
 import 'location_state.dart';
 
 class LocationCubit extends Cubit<LocationState> {

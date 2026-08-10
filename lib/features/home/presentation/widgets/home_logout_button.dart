@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../auth/cubit/auth_cubit.dart';
+import '../../../auth/presentation/cubit/auth_cubit.dart';
 
 class HomeLogoutButton extends StatelessWidget {
   const HomeLogoutButton({super.key});

@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../core/di/injections.dart';
 import '../core/router/app_router.dart';
 import '../core/theme/app_colors.dart';
-import '../features/auth/cubit/auth_cubit.dart';
+import '../features/auth/presentation/cubit/auth_cubit.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

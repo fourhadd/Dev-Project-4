@@ -1,7 +1,8 @@
+// features/location/presentation/screens/location_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/di/injections.dart';
-import '../../cubit/location_cubit.dart';
+import '../cubit/location_cubit.dart';
 import '../widgets/location_content.dart';
 
 const _gradientTop = Color(0xFF12142B);

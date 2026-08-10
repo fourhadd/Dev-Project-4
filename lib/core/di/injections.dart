@@ -1,14 +1,14 @@
 // core/di/injections.dart
 import 'package:get_it/get_it.dart';
 import '../network/dio_client.dart';
-import '../../features/auth/cubit/auth_cubit.dart';
-import '../../features/auth/cubit/login_cubit.dart';
-import '../../features/auth/cubit/register_cubit.dart';
+import '../../features/auth/presentation/cubit/auth_cubit.dart';
+import '../../features/auth/presentation/cubit/login_cubit.dart';
+import '../../features/auth/presentation/cubit/register_cubit.dart';
 import '../../features/auth/data/repositories/auth_repository.dart';
 import '../../features/auth/data/repositories/auth_repository_impl.dart';
 import '../../features/auth/data/repositories/session_repository.dart';
 import '../../features/auth/data/repositories/session_repository_impl.dart';
-import '../../features/location/cubit/location_cubit.dart';
+import '../../features/location/presentation/cubit/location_cubit.dart';
 import '../../features/location/data/repositories/location_repository.dart';
 import '../../features/location/data/repositories/location_repository_impl.dart';
 

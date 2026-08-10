@@ -1,8 +1,9 @@
+// features/location/presentation/widgets/location_content.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../cubit/location_cubit.dart';
-import '../../cubit/location_state.dart';
+import '../cubit/location_cubit.dart';
+import '../cubit/location_state.dart';
 import 'location_status_view.dart';
 
 class LocationContent extends StatelessWidget {

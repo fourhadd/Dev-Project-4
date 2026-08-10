@@ -1,8 +1,8 @@
 // core/router/app_router.dart
 import 'package:flutter/foundation.dart';
 import 'package:go_router/go_router.dart';
-import '../../features/auth/cubit/auth_cubit.dart';
-import '../../features/auth/cubit/auth_state.dart';
+import '../../features/auth/presentation/cubit/auth_cubit.dart';
+import '../../features/auth/presentation/cubit/auth_state.dart';
 import '../../features/splash/presentation/screens/splash_screen.dart';
 import '../../features/auth/presentation/screens/login_screen.dart';
 import '../../features/auth/presentation/screens/register_screen.dart';

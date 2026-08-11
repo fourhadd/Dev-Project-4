@@ -1,5 +1,5 @@
 // core/router/app_router.dart
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/auth/presentation/cubit/auth_cubit.dart';
 import '../../features/auth/presentation/cubit/auth_state.dart';
@@ -9,6 +9,23 @@ import '../../features/auth/presentation/screens/register_screen.dart';
 import '../../features/home/presentation/screens/home_screen.dart';
 import '../../features/location/presentation/screens/location_screen.dart';
 import 'go_router_refresh_stream.dart';
+
+Page<void> _buildSmoothPage(Widget child) {
+  return CustomTransitionPage<void>(
+    child: child,
+    transitionDuration: const Duration(milliseconds: 280),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      final fade = CurvedAnimation(parent: animation, curve: Curves.easeOut);
+      final slide =
+          Tween<Offset>(begin: const Offset(0, 0.04), end: Offset.zero).animate(
+              CurvedAnimation(parent: animation, curve: Curves.easeOutCubic));
+      return FadeTransition(
+        opacity: fade,
+        child: SlideTransition(position: slide, child: child),
+      );
+    },
+  );
+}
 
 GoRouter buildAppRouter(AuthCubit authCubit) {
   return GoRouter(
@@ -45,34 +62,35 @@ GoRouter buildAppRouter(AuthCubit authCubit) {
     routes: [
       GoRoute(
         path: '/login',
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           final isChecking = authCubit.state is AuthChecking;
           debugPrint(
               '[ROUTER] building /login | authState=${authCubit.state} | showingSplash=$isChecking');
-          return isChecking ? const SplashScreen() : const LoginScreen();
+          return _buildSmoothPage(
+              isChecking ? const SplashScreen() : const LoginScreen());
         },
       ),
       GoRoute(
         path: '/register',
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           debugPrint(
               '[ROUTER] building /register | authState=${authCubit.state}');
-          return const RegisterScreen();
+          return _buildSmoothPage(const RegisterScreen());
         },
       ),
       GoRoute(
         path: '/home',
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           debugPrint('[ROUTER] building /home | authState=${authCubit.state}');
-          return const HomeScreen();
+          return _buildSmoothPage(const HomeScreen());
         },
       ),
       GoRoute(
         path: '/location',
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           debugPrint(
               '[ROUTER] building /location | authState=${authCubit.state}');
-          return const LocationScreen();
+          return _buildSmoothPage(const LocationScreen());
         },
       ),
     ],
